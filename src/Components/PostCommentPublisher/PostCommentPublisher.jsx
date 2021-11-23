@@ -23,12 +23,17 @@ function PostCommentPublisher() {
         });
     }
 
+    function refreshPage(){
+        window.location.reload(true);
+    }
+
     const editoraPost = async () => {
         delete editoraSelecionada.id;
         await api.post(baseUrl, editoraSelecionada)
             .then(response => {
                 alert('COMENTÁRIO POSTADO COM SUCESSO');
                 setData(data.concat(response.data));
+                refreshPage();    
             }).catch(error => {
                 alert('COMENTÁRIO NÃO PUBLICADO');
             })
@@ -54,7 +59,7 @@ function PostCommentPublisher() {
                     </div>
                     <div className='clearfix'></div>
                     <div className='clear'></div>
-                    <Link className='btn btn-dark-gray' to='#' onClick={() => editoraPost()}>Cadastrar</Link>
+                    <Link className='btn btn-dark-gray' onClick={() => editoraPost()}>Cadastrar</Link>
                     <div className='clear'></div>
                 </form>
                 <div className='spaceghost'></div>

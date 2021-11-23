@@ -23,19 +23,24 @@ function PostCommentAuthor() {
         });
     }
 
+    function refreshPage(){
+        window.location.reload(true);
+    }
+
     const leitorPost = async () => {
         delete leitorSelecionado.id;
         await api.post(baseUrl, leitorSelecionado)
             .then(response => {
                 alert('COMENTÁRIO POSTADO COM SUCESSO');
                 setData(data.concat(response.data));
+                refreshPage();    
             }).catch(error => {
                 alert('COMENTÁRIO NÃO EFETUADO');
-            })    
+            })
     }
     return (
         <>
-           
+
             <div className='comment-respond' id='respond'>
                 <h4 className='comment-reply-title' id='reply-title'>Deixe a sua opinião:</h4>
                 <span className='underline left'></span>

@@ -23,12 +23,17 @@ function PostCommentBook() {
         });
     }
 
+    function refreshPage(){
+        window.location.reload(true);
+    }
+
     const leitorPost = async () => {
         delete leitorSelecionado.id;
         await api.post(baseUrl, leitorSelecionado)
             .then(response => {
                 alert('COMENTÁRIO POSTADO COM SUCESSO');
                 setData(data.concat(response.data));
+                refreshPage();    
             }).catch(error => {
                 alert('COMENTÁRIO NÃO EFETUADO');
             })
@@ -52,7 +57,7 @@ function PostCommentBook() {
                     </div>
                     <div className='clearfix'></div>
                     <div className='clear'></div>
-                    <Link className='btn btn-dark-gray' to='#' onClick={() => leitorPost()}>Cadastrar</Link>
+                    <Link className='btn btn-dark-gray' onClick={() => leitorPost()}>Cadastrar</Link>
                     <div className='clear'></div>
                     <div className='spaceghost'></div>
                 </form>
