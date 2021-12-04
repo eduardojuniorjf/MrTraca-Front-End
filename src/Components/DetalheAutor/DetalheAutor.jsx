@@ -31,7 +31,7 @@ function DetalheAutor() {
                         <div className='post-center-content'>
                             <ul>
                                 <h2>{data?.name}</h2>
-                                <p><strong>Biográfia:</strong> {data?.about} </p>
+                                <p align='justify'><strong>Biográfia:</strong> {data?.about} </p>
                             </ul>
                         </div>
                     </div>

@@ -52,7 +52,7 @@ function AutorLista() {
                                         </div>
                                     </header>
                                     <div className='entry-content'>
-                                        <p>{autores.resume}</p>
+                                        <p align='justify'>{autores.resume}</p>
                                     </div>
                                     <footer className='entry-footer'>
                                         <Link className='btn btn-dark-gray' to={`/autordetalhe/${autores.authorId}`}>Leia mais</Link>

@@ -31,7 +31,7 @@ function DetalheEditora() {
                         <div className='post-center-content'>
                             <ul>
                                 <h2>{data?.name}</h2>
-                                <p><strong>Biográfa:</strong> {data?.about} </p>
+                                <p align='justify'><strong>Biográfa:</strong> {data?.about} </p>
                             </ul>
                         </div>
                     </div>

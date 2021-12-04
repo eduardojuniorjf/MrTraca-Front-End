@@ -54,7 +54,7 @@ function ListaEditora() {
                                         </div>
                                     </header>
                                     <div className='entry-content'>
-                                        <p>{editora.resume}</p>
+                                        <p align='justify'>{editora.resume}</p>
                                     </div>
                                     <footer className='entry-footer'>
                                         <Link className='btn btn-dark-gray' to={`/editoradetalhe/${editora.publisherId}`}>Leia mais</Link>

@@ -33,9 +33,10 @@ function LivroDetalhe() {
                         <ul>
                             <h2>{data?.name}</h2>
                             <p><strong>Lançamento: </strong>{data?.published} </p>
+                            <p><strong>Autor: </strong> {data?.authorName} </p>
                             <p><strong>Gênero: </strong> {data?.genre} </p>
                             <p><strong>Editora: </strong> {data?.publisherName}</p>
-                            <p><strong>Sinópse: </strong> {data?.about} </p>
+                            <p align='justify'><strong>Sinópse: </strong> {data?.about} </p>
                         </ul>
                     </div>
                 </div>
